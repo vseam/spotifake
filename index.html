@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotifake</title>
-    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="icon" href="./assets/images/favicon/favicon.png">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="white-layer" style="background-color: #F7DDE0;"></div>
-    <div class="player">
-        <div class="player-song">
-            <img id="song-cover" src="./assets/images/pimp-colors.jpg" alt="#">
-            <div>
-                <span id="song-group">Pimp Flaco & Kinder Malo</span>
-                <h2 id="song-title">Chemtrails</h2>
+    <div id="app">
+        <div id="bg-audio"></div>
+        <div class="player">
+            <div class="player-audio">
+                <img id="audio-cover" src="#">
+                <div class="audio-info">
+                    <span id="info-group"></span>
+                    <h2 id="info-title"></h2>
+                </div>
             </div>
-        </div>
-        <div class="player-timeline">
-            <span id="current-time">00:00</span>
-            <div class="timeline"><div id="current-timeline"></div></div>
-            <span id="total-time">03:14</span>
-        </div>
-        <div class="player-controls">
-            <i id="backward" class="fa fa-step-backward" aria-hidden="true"></i>
-            <span id="play-stop"><i class="fa fa-play-circle-o" aria-hidden="true"></i></span>
-            <i id="forward" class="fa fa-step-forward" aria-hidden="true"></i>
+
+            <div class="player-timeline">
+                <span id="timeline-current"></span>
+                <div class="timeline-bg"><span id="timeline-line"></span></div>
+                <span id="timeline-total"></span>
+            </div>
+
+            <div class="player-controls">
+                <i id="control-previous" class="fa fa-step-backward" aria-hidden="true"></i>
+                <i id="control-play" class="fa fa-play-circle-o" aria-hidden="true"></i>
+                <i id="control-next" class="fa fa-step-forward" aria-hidden="true"></i>
+            </div>
+
+            <audio id="file-audio" src="#"></audio>
         </div>
     </div>
 
+    <script type="text/javascript" src="./assets/js/functions.js"></script>
     <script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
 </html>

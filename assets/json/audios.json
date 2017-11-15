@@ -1,0 +1,25 @@
+{
+    "audios": [
+        {
+            "cover": "pimp-colors.jpg",
+            "title": "Chemtrails",
+            "group": "Pimp Flaco & Kinder Malo",
+            "color": "#F7DDE0",
+            "file":  "pimp-kinder-chemtrails.mp3"
+        },
+        {
+            "cover": "keo-million.jpg",
+            "title": "One Million",
+            "group": "Kidd Keo",
+            "color": "#CFE1EE",
+            "file": "keo-million.mp3"
+        },
+        {
+            "cover": "nyw-rock.jpg",
+            "title": "Natos & Waor",
+            "group": "Rock n' Rollas ft. Costa",
+            "color": "#DFD6DE",
+            "file": "nyw-rock.mp3"
+        }
+    ]
+}

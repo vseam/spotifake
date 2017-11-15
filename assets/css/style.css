@@ -11,7 +11,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px; }
 
-#white-layer {
+#app #bg-audio {
   background-color: #D4D4D4;
   position: absolute;
   top: 0;
@@ -19,57 +19,60 @@ body {
   height: 260px;
   width: 100%;
   z-index: 1; }
-
-.player .player-song {
-  text-align: center; }
-  .player .player-song #song-cover {
-    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.75);
-    position: relative;
-    top: 50px;
-    max-width: 300px; }
-  .player .player-song div {
-    margin-top: 70px; }
-    .player .player-song div #song-group {
-      color: #9a9a9a; }
-    .player .player-song div #song-title {
-      color: #fafafa; }
-.player .player-timeline {
-  margin: 20px auto 0px auto;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .player .player-timeline .timeline {
-    background-color: rgba(255, 255, 255, 0.2);
-    height: 2px;
-    width: 270px;
-    margin: 0px 14px; }
-    .player .player-timeline .timeline #current-timeline {
-      background-color: rgba(255, 255, 255, 0.6);
+#app .player {
+  margin: 0px auto;
+  width: 400px; }
+  #app .player .player-audio {
+    margin-bottom: 20px;
+    text-align: center; }
+    #app .player .player-audio #audio-cover {
+      box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.75);
+      position: relative;
+      top: 50px;
+      max-width: 300px; }
+    #app .player .player-audio .audio-info {
+      margin-top: 70px; }
+      #app .player .player-audio .audio-info #info-group {
+        color: #9A9A9A; }
+      #app .player .player-audio .audio-info #info-title {
+        color: #FAFAFA; }
+  #app .player .player-timeline {
+    align-items: center;
+    display: flex;
+    margin: 0px auto 20px auto;
+    justify-content: center;
+    width: 400px; }
+    #app .player .player-timeline #timeline-current, #app .player .player-timeline #timeline-total {
+      color: #CCC;
+      font-size: 12px; }
+    #app .player .player-timeline .timeline-bg {
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0px 14px;
       height: 2px;
-      width: 0%;
-      transition: width 0.2s; }
-  .player .player-timeline #current-time, .player .player-timeline #total-time {
-    color: #CCC;
-    font-size: 12px; }
-.player .player-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 10px;
-  width: 200px;
-  margin: 0px auto; }
-  .player .player-controls #backward, .player .player-controls #play-stop, .player .player-controls #forward {
-    cursor: pointer;
-    transition: color 0.2s; }
-    .player .player-controls #backward:hover, .player .player-controls #play-stop:hover, .player .player-controls #forward:hover {
-      color: #1db954; }
-  .player .player-controls #backward, .player .player-controls #forward {
-    font-size: 25px; }
-  .player .player-controls #play-stop {
-    font-size: 80px; }
-    .player .player-controls #play-stop.active {
-      color: #1db954 !important; }
+      width: 270px; }
+      #app .player .player-timeline .timeline-bg #timeline-line {
+        background-color: rgba(255, 255, 255, 0.6);
+        display: block;
+        transition: width 0.2s;
+        height: 2px;
+        width: 0%; }
+  #app .player .player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px auto 0px auto;
+    width: 200px; }
+    #app .player .player-controls #control-previous, #app .player .player-controls #control-next {
+      font-size: 25px; }
+    #app .player .player-controls #control-play {
+      font-size: 80px; }
+      #app .player .player-controls #control-play.active {
+        color: #1DB954 !important; }
+    #app .player .player-controls #control-previous, #app .player .player-controls #control-play, #app .player .player-controls #control-next {
+      cursor: pointer;
+      transition: color 0.2s; }
+      #app .player .player-controls #control-previous:hover, #app .player .player-controls #control-play:hover, #app .player .player-controls #control-next:hover {
+        color: #1DB954; }
 
 /*# sourceMappingURL=style.css.map */
