@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+$primary-color: #1db954;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+body {
+    background-color: #141414;
+    color: #FAFAFA;
+    font: {
+        family: 'Open Sans', sans-serif;
+        size: 16px;
+    }
+}
+
+#white-layer {
+    background-color: #D4D4D4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 260px;
+    width: 100%;
+    z-index: 1;
+}
+
+.player {
+    .player-song {
+        text-align: center;
+        #song-cover {
+            box-shadow: 0px 5px 12px 1px rgba(0,0,0,0.75);
+            position: relative;
+            top: 50px;
+            max-width: 300px;
+        }
+        div {
+            margin-top: 70px;
+            #song-group {
+                color: #9a9a9a
+            }
+            #song-title {
+                color: #fafafa
+            }
+        }
+    }
+    .player-timeline {
+        margin: 20px auto 0px auto;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .timeline {
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 2px;
+            width: 270px;
+            margin: 0px 14px;
+            #current-timeline {
+                background-color: rgba(255, 255, 255, 0.6);
+                height: 2px;
+                width: 0%;
+                transition: width 0.2s;
+            }
+        }
+        #current-time, #total-time {
+            color: #CCC;
+            font-size: 12px;
+        }
+    }
+    .player-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 10px;
+        width: 200px;
+        margin: 0px auto;
+        #backward, #play-stop, #forward {
+            cursor: pointer;
+            transition: color 0.2s;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        #backward, #forward {
+            font-size: 25px;
+        }
+        #play-stop {
+            font-size: 80px;
+            &.active {
+                color: $primary-color !important;
+            }
+        }
+    }
+}

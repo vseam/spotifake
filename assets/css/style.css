@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  z-index: 2; }
+
+body {
+  background-color: #141414;
+  color: #FAFAFA;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; }
+
+#white-layer {
+  background-color: #D4D4D4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 260px;
+  width: 100%;
+  z-index: 1; }
+
+.player .player-song {
+  text-align: center; }
+  .player .player-song #song-cover {
+    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.75);
+    position: relative;
+    top: 50px;
+    max-width: 300px; }
+  .player .player-song div {
+    margin-top: 70px; }
+    .player .player-song div #song-group {
+      color: #9a9a9a; }
+    .player .player-song div #song-title {
+      color: #fafafa; }
+.player .player-timeline {
+  margin: 20px auto 0px auto;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .player .player-timeline .timeline {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 2px;
+    width: 270px;
+    margin: 0px 14px; }
+    .player .player-timeline .timeline #current-timeline {
+      background-color: rgba(255, 255, 255, 0.6);
+      height: 2px;
+      width: 0%;
+      transition: width 0.2s; }
+  .player .player-timeline #current-time, .player .player-timeline #total-time {
+    color: #CCC;
+    font-size: 12px; }
+.player .player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 10px;
+  width: 200px;
+  margin: 0px auto; }
+  .player .player-controls #backward, .player .player-controls #play-stop, .player .player-controls #forward {
+    cursor: pointer;
+    transition: color 0.2s; }
+    .player .player-controls #backward:hover, .player .player-controls #play-stop:hover, .player .player-controls #forward:hover {
+      color: #1db954; }
+  .player .player-controls #backward, .player .player-controls #forward {
+    font-size: 25px; }
+  .player .player-controls #play-stop {
+    font-size: 80px; }
+    .player .player-controls #play-stop.active {
+      color: #1db954 !important; }
+
+/*# sourceMappingURL=style.css.map */
