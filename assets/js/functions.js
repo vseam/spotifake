@@ -1,6 +1,7 @@
 // Object
-function Song(cover, title, group, color, file) {
+function Song(cover, media, title, group, color, file) {
     this.cover = cover;
+    this.media = media;
     this.title = title;
     this.group = group;
     this.color = color;
@@ -36,13 +37,12 @@ function loadAudio() {
     // Information
     document.getElementById('bg-audio').style.backgroundColor = listAudios[positionAudio].color;
     document.getElementById('audio-cover').src                = listAudios[positionAudio].cover;
+    document.getElementById('audio-media').srcset             = listAudios[positionAudio].media;
     document.getElementById('info-group').innerHTML           = listAudios[positionAudio].group;
     document.getElementById('info-title').innerHTML           = listAudios[positionAudio].title;
 
     // Timeline
-    document.getElementById('timeline-current').innerHTML     = '00:00';
     document.getElementById('timeline-line').style.width      = '0%';
-    // document.getElementById('timeline-total').innerHTML       = audioTotalTime();
 
     // Audio
     document.getElementById('file-audio').src                 = listAudios[positionAudio].file;
@@ -56,6 +56,11 @@ function resetAudio() {
 
     document.getElementById('timeline-current').innerHTML = '00:00';
     document.getElementById('timeline-line').style.width  = '0%';
+}
+
+function restartTimeline() {
+    document.getElementById('timeline-current').innerHTML = '';
+    document.getElementById('timeline-total').innerHTML   = '';
 }
 
 var timeline = null;
@@ -80,6 +85,7 @@ function previousAudio() {
         resetAudio();
         positionAudio--;
         loadAudio();
+        restartTimeline();
     }
 }
 
@@ -91,6 +97,9 @@ function playAudio() {
     controlPlay.classList.remove('fa-play-circle-o');
     controlPlay.classList.add('fa-pause-circle-o');
     controlPlay.classList.add('active');
+
+    document.getElementById('timeline-current').innerHTML = '00:00';
+    document.getElementById('timeline-total').innerHTML   = audioTotalTime();
 
     reproducing = true;
 }
@@ -113,5 +122,6 @@ function nextAudio() {
         resetAudio();
         positionAudio++;
         loadAudio();
+        restartTimeline();
     }
 }

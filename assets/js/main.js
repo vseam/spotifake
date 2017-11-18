@@ -1,8 +1,8 @@
 // Songs
 var listAudios = new Array();
-listAudios.push(new Song('./assets/images/pimp-colors.jpg', 'Chemtrails', 'Pimp Flaco & Kinder Malo', '#F7DDE0', './assets/sounds/pimp-kinder-chemtrails.mp3'));
-listAudios.push(new Song('./assets/images/keo-million.jpg', 'One Million', 'Kidd Keo', '#CFE1EE', './assets/sounds/keo-million.mp3'));
-listAudios.push(new Song('./assets/images/nyw-rock.jpg', 'Rock n\' Rollas ft. Costa', 'Natos & Waor', '#DFD6DE', './assets/sounds/nyw-rock.mp3'));
+listAudios.push(new Song('./assets/images/kinder-colors.jpg', './assets/images/pimp-colors.jpg', 'Chemtrails', 'Pimp Flaco & Kinder Malo', '#F7DDE0', './assets/sounds/pimp-kinder-chemtrails.mp3'));
+listAudios.push(new Song('./assets/images/keo-dibujo.jpg', './assets/images/keo-million.jpg', 'One Million', 'Kidd Keo', '#CFE1EE', './assets/sounds/keo-million.mp3'));
+listAudios.push(new Song('./assets/images/nyw-banco.jpg', './assets/images/nyw-botella.jpg', 'Botella para dos', 'Natos & Waor', '#EECDA6', './assets/sounds/nyw-botella.mp3'));
 
 // Variables
 var positionAudio = 0;
